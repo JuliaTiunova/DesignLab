@@ -1,4 +1,6 @@
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +22,7 @@
 }
 
 .header__container {
-  padding: 285px 150px 115px;
+  padding: 285px 145px 115px;
 }
 
 .header__title {
@@ -34,6 +36,7 @@
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2;
+  letter-spacing: 15px;
 }
 
 .header__text {
@@ -45,4 +48,67 @@
   text-transform: uppercase;
   line-height: 1.9;
   color: #fff;
+}
+
+.about__wrapper {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.wrapper {
+  position: relative;
+  border-left: 1px solid #3c3c3c;
+  border-right: 1px solid #3c3c3c;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.section__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+}
+
+.wrapper::after {
+  content: "";
+  height: 1px;
+  width: 240px;
+  background-color: #3c3c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wrapper::before {
+  content: "";
+  height: 1px;
+  width: 240px;
+  background-color: #3c3c3c;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about__text {
+  padding: 75px 170px 0;
+}
+
+.about__text--small {
+  padding: 35px 215px 32px;
+}
+
+.title {
+  font-size: 34px;
+  color: rgb(60, 60, 60);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 7px;
+}
+
+.text {
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(60, 60, 60);
+  line-height: 1.5;
 }
