@@ -198,6 +198,7 @@
   background-color: #3c3c3c;
   width: 400px;
   height: 60px;
+  border: none;
 }
 
 .button:hover {
@@ -206,4 +207,18 @@
   border: 1px solid #3c3c3c;
   cursor: pointer;
   transition: 0.2s;
+}
+
+.footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 165px;
+}
+
+.footer__copy-text {
+  font-size: 14px;
+  color: rgb(60, 60, 60);
+  line-height: 1.2;
+  margin-left: 34px;
 }
