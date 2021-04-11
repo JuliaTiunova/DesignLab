@@ -6,3 +6,43 @@
   color: #3c3c3c;
   text-align: center;
 }
+
+.header__wrapper {
+  background: url(../img/hero-bg.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header__container {
+  padding: 285px 150px 115px;
+}
+
+.header__title {
+  margin-top: 94px;
+  margin-bottom: 54px;
+}
+
+.title--main {
+  font-size: 54px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.header__text {
+  margin-bottom: 245px;
+}
+
+.text--main {
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1.9;
+  color: #fff;
+}
