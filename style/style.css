@@ -171,6 +171,7 @@
   margin-top: 42px;
   margin-bottom: 42px;
 }
+
 .title--sub {
   font-size: 20px;
   font-weight: bold;
@@ -260,4 +261,59 @@
   color: rgb(60, 60, 60);
   line-height: 1.2;
   margin-left: 34px;
+}
+
+.pen,
+.screen,
+.tablet {
+  fill: #3c3c3c;
+  fill-rule: evenodd;
+}
+
+.pen:hover,
+.screen:hover,
+.tablet:hover {
+  cursor: pointer;
+  fill: #6d6b6b;
+  fill-rule: evenodd;
+}
+
+.cls-1,
+.cls-2,
+.cls-1--small,
+.cls-2--small {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.cls-1 {
+  stroke: #fff;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-1--small,
+.cls-2--small,
+.cls-3--small {
+  fill-rule: evenodd;
+}
+
+.cls-2 {
+  stroke: #f6f7fc;
+}
+
+.cls-3,
+.cls-4 {
+  fill: #fff;
+}
+
+.cls-1--small,
+.cls-2--small {
+  stroke: #3c3c3c;
+}
+
+.cls-3--small,
+.cls-4--small {
+  fill: #3c3c3c;
 }
