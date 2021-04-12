@@ -145,10 +145,7 @@
   border-bottom: 1px solid #fff;
 }
 
-.wrapper--white::after {
-  background-color: #fff;
-}
-
+.wrapper--white::after,
 .wrapper--white::before {
   background-color: #fff;
 }
