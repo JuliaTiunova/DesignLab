@@ -9,14 +9,11 @@
   text-align: center;
 }
 
-.body__wrapper {
-  width: 1920px;
-}
-
-.header__wrapper {
+.header {
   background: url(../img/hero-bg.jpg) center center no-repeat;
   background-size: cover;
   width: 100%;
+  padding: 285px 145px 115px;
 }
 
 .header__container {
@@ -24,10 +21,6 @@
   padding-right: 150px;
   width: 900px;
   margin: 0 auto;
-}
-
-.header__wrapper {
-  padding: 285px 145px 115px;
 }
 
 .header__title {
@@ -55,7 +48,7 @@
   color: #fff;
 }
 
-.about__wrapper {
+.about {
   padding-top: 160px;
   padding-bottom: 160px;
 }
@@ -66,9 +59,9 @@
   width: 900px;
   margin: 0 auto;
   position: relative;
-  border-left: 1px solid #3c3c3c;
-  border-right: 1px solid #3c3c3c;
-  border-bottom: 1px solid #3c3c3c;
+  border-left: 2px solid #3c3c3c;
+  border-right: 2px solid #3c3c3c;
+  border-bottom: 2px solid #3c3c3c;
 }
 
 .section__title {
@@ -80,7 +73,7 @@
 
 .wrapper::after {
   content: "";
-  height: 1px;
+  height: 2px;
   width: 240px;
   background-color: #3c3c3c;
   position: absolute;
@@ -90,7 +83,7 @@
 
 .wrapper::before {
   content: "";
-  height: 1px;
+  height: 2px;
   width: 240px;
   background-color: #3c3c3c;
   position: absolute;
@@ -122,7 +115,7 @@
   line-height: 1.5;
 }
 
-.service__wrapper {
+.service {
   padding-top: 128px;
   padding-bottom: 109px;
   background: url(../img/services.jpg) center center no-repeat;
@@ -140,9 +133,9 @@
 }
 
 .wrapper--white {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .wrapper--white::after,
@@ -150,7 +143,7 @@
   background-color: #fff;
 }
 
-.info__wrapper {
+.info {
   padding-top: 120px;
   padding-bottom: 115px;
 }
@@ -182,16 +175,18 @@
   line-height: 1.9;
 }
 
-.gallery__wrapper {
-  width: 1920px;
-}
-
 .gallery__article {
   position: relative;
+  width: 100%;
 }
 
-.gallery__article:hover {
-  opacity: 0.7;
+.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery:hover .gallery__article:not(:hover) {
+  opacity: 0.6;
 }
 
 .article__title {
@@ -208,12 +203,16 @@
 
 .rows {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.footer__wrapper {
+.rows .gallery__article:nth-of-type(2n) {
+  margin-right: 12px;
+  margin-left: 12px;
+  flex-shrink: 0.85;
+}
+
+.footer {
   padding-top: 135px;
 }
 
