@@ -468,6 +468,10 @@ title .info-content__text {
   .article__title {
     font-size: $title;
   }
+
+  .button {
+    width: 600px / 900px * 100%;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -537,5 +541,7 @@ title .info-content__text {
   }
   .button {
     font-size: $text - 4px;
+
+    width: 600px / 900px * 100%;
   }
 }

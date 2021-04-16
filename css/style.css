@@ -494,6 +494,10 @@ title .info-content__text {
   .article__title {
     font-size: 34px;
   }
+
+  .button {
+    width: 66.6666666667%;
+  }
 }
 @media (max-width: 575.98px) {
   .header__container {
@@ -557,6 +561,7 @@ title .info-content__text {
 
   .button {
     font-size: 12px;
+    width: 66.6666666667%;
   }
 }
 /*# sourceMappingURL=style.css.map */
