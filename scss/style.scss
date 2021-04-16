@@ -1,6 +1,6 @@
 @import "fonts";
 @import "colors";
-
+@import "normalize.scss";
 @mixin before-after {
   content: "";
   height: 2px;
