@@ -7,9 +7,9 @@
   background-color: #3c3c3c;
   position: absolute;
 }
-@mixin background-center {
+@mixin background {
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
 }
 *,
@@ -25,10 +25,10 @@
 
 .header {
   background-image: url(../img/hero-bg.jpg);
-  @include background-center();
+  @include background;
 
   &__container {
-    width: 600 / 1920 * 100%;
+    width: 600px / 1920px * 100%;
     margin: 0 auto;
     padding-top: 285px;
     padding-bottom: 115px;
@@ -59,10 +59,10 @@
     letter-spacing: 0.16em;
   }
   &--sub {
-    font-size: 20px;
+    font-size: $title-sub;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: $height-title-sub;
     letter-spacing: 4px;
   }
 }
@@ -71,7 +71,7 @@
   font-size: 16px;
   font-weight: 300;
   color: rgb(60, 60, 60);
-  line-height: 1.5;
+  line-height: 26px;
 
   &--main {
     font-size: 15px;
@@ -110,15 +110,16 @@
   }
 }
 .about {
-  padding-top: 160px;
-  padding-bottom: 160px;
+  padding: 160px 0;
 
   &__text {
+    width: 555px / 900px * 100%;
     padding-top: 75px;
-  }
 
-  &__text--small {
-    padding: 35px 70px 32px;
+    &--small {
+      width: 490px / 900px * 100%;
+      padding-bottom: 70px;
+    }
   }
 }
 
@@ -127,7 +128,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -20px;
+    top: -15px;
   }
   &__text {
     width: 555px / 900px * 100%;
@@ -137,8 +138,8 @@
 .service {
   padding-top: 128px;
   padding-bottom: 109px;
-  background: url(../img/services.jpg) center center no-repeat;
-  background-size: cover;
+  background: url(../img/services.jpg);
+  @include background();
 
   &__container {
     padding-top: 64px;
@@ -234,13 +235,13 @@ title .info-content__text {
       font-size: 14px;
       color: rgb(60, 60, 60);
       line-height: 1.2;
-      margin-left: 34px;
+      margin-left: 34px / 1000px * 100%;
     }
   }
 }
 
 .button {
-  font-size: 16px;
+  font-size: $text;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 1.2;
@@ -307,4 +308,234 @@ title .info-content__text {
 .cls-3--small,
 .cls-4--small {
   fill: #3c3c3c;
+}
+
+@media (max-width: 1399.98px) {
+  .header__container {
+    width: 800px / 1920px * 100%;
+  }
+  .wrapper::after,
+  .wrapper::before {
+    width: 220px / 900px * 100%;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header {
+    &__container {
+      padding-top: 150px;
+      padding-bottom: 80px;
+    }
+  }
+  .wrapper {
+    width: 1200px / 1920px * 100%;
+    &::after,
+    &::before {
+      width: 210px / 900px * 100%;
+    }
+  }
+  .about {
+    padding: 100px 0;
+    &__text {
+      padding-top: 70px;
+
+      &--small {
+        padding-top: 20px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  .section__text {
+    width: 650px / 900px * 100%;
+  }
+  .title {
+    font-size: $title - 5px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    &__container {
+      width: 1000px / 1920px * 100%;
+      padding-top: 120px;
+    }
+    &__text {
+      margin-bottom: 50px;
+    }
+    &__scroll {
+      display: none;
+    }
+  }
+  .title {
+    font-size: $title - 8px;
+
+    line-height: $height-title-main - 4px;
+
+    &--main {
+      font-size: $title-main - 8px;
+      line-height: $height-title-main - 4px;
+    }
+    &--sub {
+      font-size: $title-sub - 2px;
+      line-height: $height-title-sub - 2px;
+    }
+  }
+  .text {
+    font-size: $text-main - 2px;
+    line-height: $height-text - 2px;
+    &--main {
+      font-size: $text-main - 2px;
+      line-height: $height-text - 2px;
+    }
+  }
+  .section {
+    &__title {
+      top: -30px;
+    }
+  }
+  .about {
+    padding: 100px 0;
+    &__text {
+      padding-top: 50px;
+
+      &--small {
+        width: 555px / 900px * 100%;
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+  .service {
+    padding: 70px 0;
+  }
+  .info {
+    padding: 80px 0;
+
+    &__container {
+      padding-top: 50px;
+    }
+    &__content {
+      margin-bottom: 50px;
+    }
+  }
+  .footer {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__container {
+    width: 1200px / 1920px * 100%;
+  }
+  .title {
+    font-size: $title - 12px;
+
+    line-height: $height-title - 8px;
+
+    &--main {
+      font-size: $title-main - 10px;
+      line-height: $height-title-main - 10px;
+    }
+
+    &--sub {
+      font-size: $title-sub - 3px;
+      line-height: $height-title-sub - 5px;
+    }
+  }
+  .section {
+    &__title {
+      top: -10px;
+    }
+  }
+  .about {
+    padding: 100px 0;
+    &__text {
+      padding-top: 25px;
+
+      &--small {
+        width: 555px / 900px * 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px / 1920px * 100%;
+  }
+  .article__title {
+    font-size: $title;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    &__container {
+      width: 1600px / 1920px * 100%;
+      padding-top: 60px;
+    }
+    &__text {
+      margin-bottom: 40px;
+    }
+  }
+  .wrapper {
+    width: 1500px / 1920px * 100%;
+    &::after,
+    &::before {
+      width: 200px / 900px * 100%;
+    }
+  }
+  .title {
+    font-size: $title - 16px;
+
+    line-height: $height-title - 9px;
+
+    &--main {
+      font-size: $title-main - 30px;
+      line-height: $height-title-main - 25px;
+    }
+
+    &--sub {
+      font-size: $title-sub - 5px;
+      line-height: $height-title-sub - 10px;
+    }
+  }
+  .section {
+    &__title {
+      top: -10px;
+    }
+  }
+  .about {
+    padding: 100px 0;
+    &__text {
+      padding-top: 25px;
+
+      &--small {
+        width: 555px / 900px * 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .article__title {
+    font-size: $title - 12px;
+  }
+  .footer {
+    &__text {
+      padding-top: 40px;
+      padding-bottom: 35px;
+    }
+    &__copy {
+      height: 100px;
+      &-text {
+        font-size: 10px;
+      }
+    }
+  }
+  .button {
+    font-size: $text - 4px;
+  }
 }
