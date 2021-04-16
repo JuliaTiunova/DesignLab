@@ -292,13 +292,6 @@ title .info-content__text {
   fill: #3c3c3c;
   fill-rule: evenodd;
 }
-.pen:hover,
-.screen:hover,
-.tablet:hover {
-  cursor: pointer;
-  fill: #565656;
-  fill-rule: evenodd;
-}
 
 .cls-1,
 .cls-2,
@@ -419,37 +412,37 @@ title .info-content__text {
   .section__title {
     top: -30px;
   }
-
-  .about {
-    padding: 100px 0;
-  }
-  .about__text {
-    padding-top: 50px;
-  }
-  .about__text--small {
-    width: 61.6666666667%;
-    padding-top: 10px;
-    padding-bottom: 40px;
-  }
-
-  .service {
-    padding: 70px 0;
-  }
-
-  .info {
-    padding: 80px 0;
-  }
-  .info__container {
-    padding-top: 50px;
-  }
-  .info__content {
-    margin-bottom: 50px;
-  }
-
-  .footer {
-    padding-top: 90px;
-  }
 }
+.about {
+  padding: 100px 0;
+}
+.about__text {
+  padding-top: 50px;
+}
+.about__text--small {
+  width: 61.6666666667%;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.service {
+  padding: 70px 0;
+}
+
+.info {
+  padding: 80px 0;
+}
+.info__container {
+  padding-top: 50px;
+}
+.info__content {
+  margin-bottom: 50px;
+}
+
+.footer {
+  padding-top: 90px;
+}
+
 @media (max-width: 767.98px) {
   .header__container {
     width: 62.5%;
